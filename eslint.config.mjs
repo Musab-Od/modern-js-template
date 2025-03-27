@@ -4,8 +4,14 @@ import eslintConfigPrettier from 'eslint-config-prettier'
 
 export default [
   {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+    },
     rules: {
-      'no-console': 'off',
+      'prettier/prettier': 'error', // Treat Prettier formatting issues as ESLint errors
+      'no-unused-vars': 'warn', // Warn about unused variables
+      'no-console': 'off', // Allow console logs
     },
   },
   eslintConfigPrettier,
